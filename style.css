@@ -1,0 +1,98 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background: #2c3e50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  font-size: 16px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+header {
+  height: 500px;
+  width: 500px;
+  padding: 10px;
+  background-image: url("./serge-minhulin-thumb-cover-002-end.jpg");
+  background-size: cover;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+header > h1 {
+  color: white;
+  font-size: 3.2em;
+  position: relative;
+}
+header > h1::after {
+  content: "st.dago comic";
+  font-size: 16px;
+  position: absolute;
+  bottom: -20px;
+  left: 5px;
+  text-transform: capitalize;
+}
+div.float {
+  position: absolute;
+  bottom: 7px;
+  right: 5px;
+  z-index: 2;
+  transition-timing-function: cubic-bezier(0.53, 2, 0.30, 1);
+}
+button {
+  background-color: sandybrown;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: large;
+  font-weight: 800;
+  outline: none;
+}
+button:active {
+  background-color: #E4741E;
+  border: none;
+  outline: none;
+  color: #EBE5E0;
+}
+header > section {
+  background: #FFFFFF;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  bottom: -400px;
+  left: 50%;
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+  text-transform: capitalize;
+  padding-top: 25px;
+}
+section.profile-info {
+  display: flex;
+}
+section.profile-info > div {
+  border-top: 0.5px solid hsla(235, 15%, 21%, 0.5);
+  flex-grow: 2;
+  padding: 20px;
+}
+article {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+section.profile-info p,
+article{
+  color: hsla(235, 5%, 55%, 1);
+  font-size: 0.8em;
+}
+
+
+/* animation zone */
+div.float,
+header > section {
+  transition-property: bottom;
+  transition-duration: 500ms;
+}
